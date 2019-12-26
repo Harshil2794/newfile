@@ -1,0 +1,100 @@
+.card-wrapper.night-view{
+  background-image: url("../images/night-bg.jpg");
+  background-color: #000;
+}
+.card-wrapper.night-view:after{
+  content: "";
+  background: url("../images/twinkling.png") repeat top center; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -2;
+
+  -moz-animation: starAnimate 200s linear infinite;
+  -ms-animation: starAnimate 200s linear infinite;
+  -o-animation: starAnimate 200s linear infinite;
+  -webkit-animation: starAnimate 200s linear infinite;
+  animation: starAnimate 200s linear infinite;
+}
+.mountain-bg.night-mountain-bg{
+  background-image: url("../images/night-mountain-bg.svg");
+}
+.cloud-large.night-large{
+  background-image: url("../images/clouds-night-2.png");
+  background-size: 100%;
+    width: 500px;
+    height: 270px;
+    top: 50px;
+}
+.cloud-medium.night-medium{
+  background-image: url("../images/clouds-night-2.png");
+  background-size: 100%;
+    width: 360px;
+    height: 170px;
+    top: 65px;
+}
+.cloud-small.night-small{
+  background-image: url("../images/clouds-night-2.png");
+}
+.moon{
+  background-image: url("../images/moon.svg"); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 51px;
+  right: 80px;
+  z-index: 0;
+  border-radius: 100%;
+
+  -webkit-animation: shadowAnimate 2s infinite alternate-reverse;
+  -moz-animation: shadowAnimate 2s infinite alternate-reverse;             
+  -ms-animation: shadowAnimate 2s infinite alternate-reverse;
+  -o-animation: shadowAnimate 2s infinite alternate-reverse;
+  animation: shadowAnimate 2s infinite alternate-reverse;
+}
+
+/*Moon Animation*/
+@-webkit-keyframes shadowAnimate{
+  0% { box-shadow: 0px 0px 100px grey;}
+  100% {   box-shadow: 0px 0px 40px white;}
+}
+@keyframes shadowAnimate{
+  0% { box-shadow: 0px 0px 100px grey;}
+  100% {   box-shadow: 0px 0px 40px white;}
+}
+
+/*Star Animation*/
+@-webkit-keyframes starAnimate{
+  0% { background-position: 0 0;}
+  100% { background-position: -10000px 5000px;}
+}
+@keyframes starAnimate{
+  0% { background-position: 0 0;}
+  100% { background-position: -10000px 5000px;}
+}
+
+/*MEDIA CSS*/
+@media (max-width: 1440px){
+  .cloud-medium.night-medium{right: 200px; top: 100px; }
+  .cloud-large.night-large{top: 100px; left: 135px; }
+  
+}
+@media (max-width: 1024px){
+  .cloud-medium.night-medium { right: 85px; top: 130px; width: 290px; height: 110px;}
+  .cloud-large.night-large { top: 100px; left: 59px; width: 401px; height: 210px; }
+  .moon{width: 120px; height: 120px;}
+}
+@media (max-width: 768px){
+  .cloud-medium.night-medium { right: 35px; top: 245px; }
+  .cloud-large.night-large { top: 190px; left: -30px; width: 375px; height: 132px; }
+
+}

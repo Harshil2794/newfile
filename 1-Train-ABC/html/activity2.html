@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="format-detection" content="telephone=no">
+	<title>Activity</title>
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style-night.css">
+</head>
+<body>
+		<audio loop id="backgroundSound" src="sounds/background.mp3" type="audio/mpeg"></audio>
+	<audio id="wrongAttemptSound" src="sounds/wrongSound2.mp3" type="audio/mpeg"></audio>
+	<audio id="correctAttemptSound" src="sounds/rightans.mp3" type="audio/mpeg"></audio>
+	<audio id="completeActivitySound" src="sounds/wellDone.mp4" type="audio/mpeg"></audio>
+	<audio id="trainSound" src="sounds/train-whistle.mp3" type="audio/mpeg"></audio>
+	<div class="wrapper">
+		<main class="main-content">
+			<section class="card-wrapper night-view">
+				<div class="mountain-bg night-mountain-bg"></div>
+				<div class="cloud-large night-large"></div>
+				<div class="cloud-medium night-medium"></div>
+				<div class="cloud-small night-small"></div>
+				<div class="moon"></div>
+				<div id="content">
+					<div id="cardPile">
+					</div>
+					<div id="cardSlots">
+					</div>
+				</div>
+				<div class="popup" id="successMessage">
+					<div class="successMessage">
+					    <span class="welldone-text"> Well Done</span>
+					    <span class="level-text">Level - 10 Completed</span>
+					</div>
+				</div>
+				<div class="popup" id="nextActivity">
+					<div class="nextActivity">
+					    <button onclick="nextActivity()">Next Activity</button>
+					</div>
+				</div>
+				<button onclick="playPause();" id="soundbtn" class="playbtn"></button>
+				<button class="infobtn"></button>
+				<div class="info-popup">
+					<div class="info-video-wrapper">
+						<div class="close">
+							<i><img src="images/cancel.svg"></i>
+						</div>
+						<video controls>
+						  <source src="sounds/info-video.mp4" type="video/mp4">
+						  Your browser does not support HTML5 video.
+						</video>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<footer>
+		
+	</footer>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/general-night.js"></script>
+</body>
+</html>

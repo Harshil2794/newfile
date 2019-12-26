@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="format-detection" content="telephone=no">
+	<title>Space Ship</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<audio loop id="backgroundSound" src="sounds/space-ambience.mp3" preload="auto" type="audio/mpeg"></audio>
+	<audio id="rocketFly" src="sounds/rocketFly.mp3" type="audio/mpeg"></audio>
+	<audio id="jumpSound" src="sounds/jump.mp3" type="audio/mpeg"></audio>
+	<audio id="danceSlowSound" src="sounds/dance-slow.mp3" type="audio/mpeg"></audio>
+	<div class="wrapper">
+		<main class="main-content">
+			<section class="card-wrapper">
+				<div class="planet-bottom"></div> 
+				<div class="planet"></div>
+				<div class="shooting-star">
+					<div class="star"></div>
+					<div class="star"></div>
+					<div class="star"></div>
+				</div>
+				<div class="twinkling"></div>
+				<div id="content-id">
+					<div class="space-light"></div>
+					<div class="landing-base">
+						<div class="astronaut"></div>
+						<div class="stone-wrapper">
+							<div class="stone" id="stone1"></div>
+							<div class="stone" id="stone2"></div>
+							<div class="stone" id="stone3"></div>
+							<div class="stone" id="stone4"></div>
+						</div>
+						<div class="rocket"></div>
+					</div>
+					<div id="cardSlots"></div>
+					<div id="cardPile"></div>
+					<div class="play-popup">
+						<button>
+							<i><img src="images/play.svg"></i>
+						</button>
+					</div>
+				</div>
+				<div class="popup" id="nextActivity">
+					<div class="nextActivity">
+					    <button onclick="nextActivity()">Next Activity</button>
+					</div>
+				</div>
+				<button onclick="playPause();" id="soundbtn" class="playbtn"></button>
+				<button class="infobtn"></button>
+				<div class="info-popup">
+					<div class="info-video-wrapper">
+						<div class="close">
+							<i><img src="images/cancel.svg"></i>
+						</div>
+						<video controls>
+						  <source src="sounds/info-video.mp4" type="video/mp4">
+						  Your browser does not support HTML5 video.
+						</video>
+					</div>
+				</div>
+			</section>
+			<input type="hidden" id="commandCount" value="0"/>
+		</main>
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
